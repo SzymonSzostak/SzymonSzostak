@@ -1,0 +1,23 @@
+def obliczanie():
+ X, Y = list(map(int,input("Podaj dane wejsciowe:").split()))
+
+ if X <= 0:
+    print("Pierwsza liczba musi być większa od zera")
+    return obliczanie()
+ elif Y >=(300000000):
+    print("Druga liczba musi być mniejsza od 300000000")
+    return obliczanie()
+ else:
+        K=((Y - (X * 2)) / 2)
+        Q=(X - K)
+        if(K < 0):
+          print("złe dane wejściowe")
+          return obliczanie()
+        elif(Q < 0):
+          print("złe dane wejściowe")
+          return obliczanie()
+        else:
+              print(('%f' % Q).rstrip('0').rstrip('.'), ('%f' % K).rstrip('0').rstrip('.'))
+              return obliczanie()
+           
+obliczanie()
